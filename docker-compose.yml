@@ -2,6 +2,8 @@ services:
   monitor:
     build: .
     image: my-script
+    ports:
+      - "8080:8080"
     volumes:
       - /mnt/logs:/var/www                    # monitor.log пишется на LVM-том хоста
       - /etc/localtime:/etc/localtime:ro      # часовой пояс как на хосте
