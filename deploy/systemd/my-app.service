@@ -8,8 +8,6 @@ Wants=raid-lab.service
 ExecStart=/usr/bin/docker start -a my-app
 ExecStop=/usr/bin/docker stop my-app
 Restart=on-failure
-# docker start -a возвращает код контейнера; 143 = остановлен по SIGTERM (docker stop), это не ошибка
-SuccessExitStatus=143
 
 [Install]
 WantedBy=multi-user.target
