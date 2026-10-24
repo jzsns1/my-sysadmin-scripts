@@ -2,6 +2,6 @@ services:
   monitor:
     build: .
     image: my-script
-    # monitor.log пишется на LVM-том хоста
     volumes:
-      - /mnt/logs:/var/www
+      - /mnt/logs:/var/www                    # monitor.log пишется на LVM-том хоста
+      - /etc/localtime:/etc/localtime:ro      # часовой пояс как на хосте
