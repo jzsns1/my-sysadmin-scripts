@@ -1,0 +1,44 @@
+$ ./script.sh        # остановлен через ~25 с (Ctrl+C), INTERVAL=10
+Мониторинг запущен: интервал 10 с, лог: ./monitor.log
+^CМониторинг остановлен, лог: ./monitor.log
+
+$ cat monitor.log
+--- 2026-10-24 19:14:13 ---
+               total        used        free      shared  buff/cache   available
+Mem:           1.9Gi       191Mi       986Mi       0.0Ki       785Mi       1.6Gi
+Swap:             0B          0B          0B
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           197M  996K  196M   1% /run
+/dev/sda1       9.6G  1.9G  7.7G  20% /
+tmpfs           982M     0  982M   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+/dev/sda15      105M  6.1M   99M   6% /boot/efi
+tmpfs           197M  4.0K  197M   1% /run/user/1000
+ 19:14:13 up 1 min,  0 users,  load average: 0.39, 0.25, 0.09
+
+--- 2026-10-24 19:14:23 ---
+               total        used        free      shared  buff/cache   available
+Mem:           1.9Gi       191Mi       986Mi       0.0Ki       786Mi       1.6Gi
+Swap:             0B          0B          0B
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           197M  996K  196M   1% /run
+/dev/sda1       9.6G  1.9G  7.7G  20% /
+tmpfs           982M     0  982M   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+/dev/sda15      105M  6.1M   99M   6% /boot/efi
+tmpfs           197M  4.0K  197M   1% /run/user/1000
+ 19:14:23 up 1 min,  0 users,  load average: 0.33, 0.24, 0.09
+
+--- 2026-10-24 19:14:33 ---
+               total        used        free      shared  buff/cache   available
+Mem:           1.9Gi       191Mi       986Mi       0.0Ki       786Mi       1.6Gi
+Swap:             0B          0B          0B
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           197M  996K  196M   1% /run
+/dev/sda1       9.6G  1.9G  7.7G  20% /
+tmpfs           982M     0  982M   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+/dev/sda15      105M  6.1M   99M   6% /boot/efi
+tmpfs           197M  4.0K  197M   1% /run/user/1000
+ 19:14:33 up 1 min,  0 users,  load average: 0.28, 0.23, 0.09
+
