@@ -1,0 +1,12 @@
+[Unit]
+Description=RAID 1 + LVM on loop devices (/mnt/raid-lab)
+After=local-fs.target
+Before=docker.service my-app.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/local/sbin/raid-lab-up.sh
+
+[Install]
+WantedBy=multi-user.target
