@@ -1,0 +1,7 @@
+services:
+  monitor:
+    build: .
+    image: my-script
+    # monitor.log пишется на LVM-том хоста
+    volumes:
+      - /mnt/logs:/var/www
