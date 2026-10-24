@@ -1,9 +1,9 @@
 #!/bin/bash
 # Мониторинг ресурсов: раз в N секунд пишет free/df/uptime в monitor.log
 
-INTERVAL=10          # пауза между замерами, секунд
-ITERATIONS=0         # сколько замеров сделать (0 = бесконечно, до Ctrl+C)
-LOG_FILE="$(dirname "$0")/monitor.log"
+INTERVAL="${INTERVAL:-10}"           # пауза между замерами, секунд
+ITERATIONS="${ITERATIONS:-0}"        # сколько замеров сделать (0 = бесконечно, до Ctrl+C)
+LOG_FILE="${LOG_FILE:-monitor.log}"  # лог пишется в текущую директорию
 
 # проверяем, что нужные команды есть в системе
 for cmd in free df uptime date; do
